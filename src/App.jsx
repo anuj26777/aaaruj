@@ -16,6 +16,7 @@ const App = () => {
     <div className='bg-red-400 text-white'>
      <Router>
       <Routes>
+      <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard/>} />
