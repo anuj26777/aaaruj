@@ -32,7 +32,7 @@ const Register = () => {
     if (formData.photo) data.append("photo", formData.photo);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/register", data);
+      const response = await axios.post("https://backend-afjq.onrender.com/api/register", data);
       toast.success(response.data.message);
       navigate("/login"); // Navigate to the login page
     } catch (err) {

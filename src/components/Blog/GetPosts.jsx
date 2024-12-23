@@ -11,7 +11,7 @@ const GetAllPosts = () => {
   const fetchPosts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:8080/api/posts", {
+      const response = await axios.get("https://backend-afjq.onrender.com/api/posts", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -27,7 +27,7 @@ const GetAllPosts = () => {
     if (userConfirmed) {
       try {
         const token = localStorage.getItem("token");
-        await axios.delete(`http://localhost:8080/api/posts/${id}`, {
+        await axios.delete(`https://backend-afjq.onrender.com/api/posts/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

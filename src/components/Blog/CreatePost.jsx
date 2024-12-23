@@ -39,7 +39,7 @@ const CreatePost = ({ fetchPosts }) => {
     const token = localStorage.getItem("token");
     console.log("Token:", token);
     try {
-      const response = await axios.post("http://localhost:8080/api/posts", formData, {
+      const response = await axios.post("https://backend-afjq.onrender.com/api/posts", formData, {
         headers: {
           "Content-Type": "multipart/form-data", 
           "Authorization": `Bearer ${token}`,

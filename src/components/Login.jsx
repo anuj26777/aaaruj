@@ -22,7 +22,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/login", formData);
+      const response = await axios.post("https://backend-afjq.onrender.com/api/login", formData);
       
       
       const { token, message } = response.data;

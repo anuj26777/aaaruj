@@ -15,7 +15,7 @@ const EditPost = () => {
     const fetchPost = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:8080/api/posts/${id}`, {
+        const response = await axios.get(`https://backend-afjq.onrender.com/api/posts/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
