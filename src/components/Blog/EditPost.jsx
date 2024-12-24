@@ -51,7 +51,7 @@ const EditPost = () => {
         formDataToSubmit.append("blogImage", formData.blogImage);
       }
 
-      await axios.put(`http://localhost:8080/api/posts/${id}`, formDataToSubmit, {
+      await axios.put(`https://backend-afjq.onrender.com/api/posts/${id}`, formDataToSubmit, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -82,7 +82,7 @@ const EditPost = () => {
           <input
             type="file"
             name="blogImage"
-            onChange={handleFileChange} // Handle file changes
+            onChange={handleFileChange} 
             className="w-full p-2 border border-gray-300 rounded  text-black"
           />
         </div>
